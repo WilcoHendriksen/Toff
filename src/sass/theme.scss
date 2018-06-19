@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@import "./_variables.scss";
+
+@include mat-core();
+//$theme: mat-dark-theme($app-primary, $app-accent);
+$theme: mat-light-theme($app-primary, $app-accent);
+@include angular-material-theme($theme);

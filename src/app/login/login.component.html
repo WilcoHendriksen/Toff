@@ -1,0 +1,13 @@
+<form class="login-form">
+  <h2 class="mat-display-1" i18n="@@loginTitle">Login</h2>
+  <mat-form-field class="login-full-width">
+    <input name="username" [(ngModel)]="username" matInput placeholder="Username" />
+  </mat-form-field>
+  <mat-form-field class="login-full-width">
+    <input name="password" [(ngModel)]="password" matInput placeholder="Password" [type]="hide ? 'password' : 'text'"/>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+  <div class="button-row" style="float: right;">
+    <button mat-raised-button (click)="DoLogin()" color="primary" i18n="@@loginTitle">login</button>
+  </div>
+</form>

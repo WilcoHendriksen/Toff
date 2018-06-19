@@ -1,0 +1,77 @@
+<div class="clientComponent" *ngIf="client">
+  <!-- form -->
+  <form class="clientform" [formGroup]="clientForm" novalidate>
+    <mat-form-field class="width100">
+      <input matInput placeholder="voornaam" formControlName="firstName">
+      <mat-error>field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="width100">
+      <input matInput placeholder="tussenvoegsel" formControlName="prePosition">
+    </mat-form-field>
+    <mat-form-field class="width100">
+      <input matInput placeholder="achternaam" formControlName="lastName">
+      <mat-error>field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width:69%">
+      <input matInput placeholder="straat" formControlName="street">
+    </mat-form-field>
+    <mat-form-field style="width:30%;" class=right>
+      <input matInput placeholder="nummer" formControlName="streetNumber">
+    </mat-form-field>
+    <mat-form-field class="width100">
+      <input matInput placeholder="plaats" formControlName="city">
+    </mat-form-field>
+    <mat-form-field style="width:49%;">
+      <input matInput placeholder="mobiel" formControlName="mobileNumber">
+    </mat-form-field>
+    <mat-form-field style="width:50%" class="right">
+      <input matInput placeholder="telefoon nummer" formControlName="phoneNumber">
+    </mat-form-field>
+    <mat-form-field style="width:49%">
+      <input matInput placeholder="eerste afspraak" [matDatepicker]="firstAppointment" formControlName="firstAppointment">
+      <mat-datepicker-toggle matSuffix [for]="firstAppointment"></mat-datepicker-toggle>
+      <mat-datepicker #firstAppointment touchUi="true"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field style="width:50%;" class="right">
+      <input matInput placeholder="geboortedag" [matDatepicker]="birthday" formControlName="birthday">
+      <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
+      <mat-datepicker #birthday touchUi="true"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="width100">
+      <input matInput placeholder="interval" formControlName="interval">
+    </mat-form-field>
+    <p>Diabetes
+      <mat-slide-toggle class="right" color='primary' [checked]="diabetes" formControlName="diabetes"></mat-slide-toggle>
+    </p>
+    <hr style="border-top: 1px solid rgba(255,255,255,.7);">
+    <mat-form-field class="width100">
+      <input matInput placeholder="allegien" formControlName="allergy">
+    </mat-form-field>
+    <mat-form-field class="width100">
+      <input matInput placeholder="bijzonderheden" formControlName="particularities">
+    </mat-form-field>
+  </form>
+
+  <!-- button row -->
+  <div class="button-row action-button-row">
+    <button [hidden]="editMode" [disabled]="this.isDialogUp" class="right" style="margin-right: 10px;" mat-fab color="primary"
+      (click)="this.enableForm()">
+      <mat-icon aria-label="edit">mode_edit</mat-icon>
+    </button>
+    <button [hidden]="!editMode" class="right" style="margin-right: 10px;" mat-fab color="primary" (click)="this.cancelEdit()">
+      <mat-icon aria-label="cancel">cancel</mat-icon>
+    </button>
+    <button [hidden]="!editMode" [disabled]="this.clientForm.status!='VALID'" class="right" style="margin-right: 10px;" mat-fab
+      color="primary" (click)="this.saveClient()">
+      <mat-icon aria-label="save">save</mat-icon>
+    </button>
+    <button [hidden]="editMode" [disabled]="this.clientForm.status=='VALID' || this.isDialogUp" class="right" style="margin-right: 10px;"
+      mat-fab color="primary" (click)="this.deleteConfirmationDialog()">
+      <mat-icon aria-label="delete">delete</mat-icon>
+    </button>
+  </div>
+
+</div>
+<hr>
+<p>Form status: {{ clientForm.status | json }} isDialogUp: {{ this.isDialogUp | json }}</p>
+<p>Form value: {{ clientForm.value | json }}</p>

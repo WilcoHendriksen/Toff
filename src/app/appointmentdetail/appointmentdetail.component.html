@@ -1,0 +1,53 @@
+<div class="appointmentComponent">
+  <form class="appointmentform" novalidate>
+    <mat-form-field class="width100">
+      <input matInput placeholder="datum afspraak" [matDatepicker]="appointment">
+      <mat-datepicker-toggle matSuffix [for]="appointment"></mat-datepicker-toggle>
+      <mat-datepicker #appointment touchUi="true"></mat-datepicker>
+    </mat-form-field>
+
+    <div style="width:50%;float:left;">
+      <mat-form-field class="width100">
+        <mat-select placeholder="Begintijd"[(value)]="beginTime">
+          <mat-option *ngFor="let time of times" [value]="time">
+            {{ time }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div style="width:50%;float:right;">
+      <mat-form-field class="width100">
+        <mat-select placeholder="Eindtijd" [(value)]="endTime">
+          <mat-option *ngFor="let time of times" [value]="time">
+            {{ time }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>    
+    </div>  
+
+    
+
+
+
+  </form>
+  <hr>
+  <p>begin value: {{ beginTime }} end value: {{ endTime }}</p>
+
+  <div class="button-row action-button-row">
+    <button class="right" style="margin-right: 10px;" mat-fab color="primary" (click)="this.enableForm()">
+      <mat-icon aria-label="edit">edit</mat-icon>
+    </button>
+    <!-- <button [hidden]="!editMode" class="right" style="margin-right: 10px;" mat-fab color="primary" (click)="this.cancelEdit()">
+      <mat-icon aria-label="cancel">cancel</mat-icon>
+    </button>
+    <button [hidden]="!editMode" [disabled]="this.appointmentForm.status!='VALID'" class="right" style="margin-right: 10px;" mat-fab
+      color="primary" (click)="this.appointmentClient()">
+      <mat-icon aria-label="save">save</mat-icon>
+    </button>
+    <button [hidden]="editMode" [disabled]="this.clientForm.status=='VALID' || this.isDialogUp" class="right" style="margin-right: 10px;"
+      mat-fab color="primary" (click)="this.deleteConfirmationDialog()">
+      <mat-icon aria-label="delete">delete</mat-icon>
+    </button> -->
+  </div>
+</div>

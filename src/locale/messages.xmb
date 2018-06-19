@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="loginTitle"><source>app/login/login.component.ts:2</source><source>app/login/login.component.ts:11</source>Login</msg>
+  <msg id="navCustomers"><source>app/navigation/navigation.component.ts:15</source>Customers</msg>
+  <msg id="navAddCustomer"><source>app/navigation/navigation.component.ts:19</source>Add customer</msg>
+  <msg id="navSettings"><source>app/navigation/navigation.component.ts:23</source>Settings</msg>
+  <msg id="navLogout"><source>app/navigation/navigation.component.ts:27</source>Log out</msg>
+</messagebundle>

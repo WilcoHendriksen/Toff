@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+  <file original="ng.template" id="ngi18n">
+    <unit id="loginTitle">
+      <notes>
+        <note category="location">app/login/login.component.ts:2</note>
+        <note category="location">app/login/login.component.ts:11</note>
+      </notes>
+      <segment>
+        <source>Login</source>
+      </segment>
+    </unit>
+    <unit id="navCustomers">
+      <notes>
+        <note category="location">app/navigation/navigation.component.ts:15</note>
+      </notes>
+      <segment>
+        <source>Customers</source>
+      </segment>
+    </unit>
+    <unit id="navAddCustomer">
+      <notes>
+        <note category="location">app/navigation/navigation.component.ts:19</note>
+      </notes>
+      <segment>
+        <source>Add customer</source>
+      </segment>
+    </unit>
+    <unit id="navSettings">
+      <notes>
+        <note category="location">app/navigation/navigation.component.ts:23</note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+      </segment>
+    </unit>
+    <unit id="navLogout">
+      <notes>
+        <note category="location">app/navigation/navigation.component.ts:27</note>
+      </notes>
+      <segment>
+        <source>Log out</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

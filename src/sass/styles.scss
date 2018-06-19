@@ -1,0 +1,40 @@
+// @import './variables';
+// @import './mixins';
+
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+//@import '../app/clients/_clients.component-theme.scss';
+
+
+@import "./theme.scss";
+
+////////////////////////////////////
+// old shizzle
+body {
+    margin: 0;
+}
+h1 {
+    font-family: "Roboto","Helvetica Neue","sans-serif";
+    font-size: 25px;
+    font-weight: 700;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.width100 {
+    width: 100%;
+}
+form {
+    padding-top: 8px;
+}
+.action-button {
+    z-index: 2;
+    margin-right: 10px;
+}
+.action-button-row {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+}

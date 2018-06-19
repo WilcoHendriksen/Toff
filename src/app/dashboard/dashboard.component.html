@@ -1,0 +1,26 @@
+<p>dashboard todo, some agenda view probally...</p>
+
+<table>
+    <tr>
+        <td><button mat-fab (click)="previousWeek()">prev</button></td>
+        <td></td>
+        <td>{{week}}</td>
+        <td></td>
+        <td><button mat-fab (click)="nextWeek()">next</button></td>
+    </tr>
+    <tr>
+        <td>{{ma}}</td>
+        <td>{{di}}</td>
+        <td>{{wo}}</td>
+        <td>{{do}}</td>
+        <td>{{vr}}</td>
+    </tr>
+</table>
+            {{date}}
+
+<!-- button row -->
+<div class="button-row action-button-row">
+    <button class="right" style="margin-right:10px;" mat-fab color="primary" (click)="this.addAppointment()">
+        <mat-icon aria-label="add">add</mat-icon>
+    </button>
+</div>
